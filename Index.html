@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koleksi fashion estetik dari bymella.my.id. Pilih opsi Pre-Order, Custom Desain, atau Ready Stock dengan perpaduan warna pink manis yang ceria.">
+    <title>bymella Official | Outfit Manis, Cerah & Ceria Pembuat Bahagia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-main">ByMella</span>
+                <span class="logo-sub">Sweet Pastel Wear</span>
+            </a>
+
+            <nav class="nav-bar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#koleksi" class="nav-link">Lihat Koleksi</a></li>
+                    <li><a href="#katalog" class="nav-link">Katalog Belanja</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn cart-trigger" id="cartToggle" aria-label="Buka Keranjang">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartCounter">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mini-cart-overlay" id="cartOverlay">
+        <div class="mini-cart-panel">
+            <div class="cart-panel-header">
+                <h3>Tas Belanja Kamu</h3>
+                <button class="close-cart-btn" id="closeCart"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="cart-panel-body" id="cartItemsContainer">
+                <p class="empty-cart-text">Keranjangmu masih kosong nih. Yuk, isi dengan baju incaranmu!</p>
+            </div>
+            
+            <div class="cart-panel-footer">
+                <div class="cart-total-row">
+                    <span>Total Belanja:</span>
+                    <span id="cartSubtotal">Rp 0</span>
+                </div>
+                <button class="checkout-whatsapp-btn" id="whatsappCheckout">
+                    <i class="fab fa-whatsapp"></i> Hubungi Admin via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="hero-section">
+        <div class="hero-bg-shapes">
+            <div class="shape circle-pink-main"></div>
+            <div class="shape circle-pink-soft"></div>
+            <div class="shape circle-yellow-accent"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tagline"><span class="tag-pill">Koleksi Baru Minggu Ini ✨</span></div>
+                <h1 class="hero-title">Tampil Lebih Pede & Menyala dengan Ragam <span class="text-gradient">Warna Ceria</span></h1>
+                <p class="hero-description">Bosan dengan outfit warna bumi yang itu-itu aja? Saatnya bawa pulang koleksi baju dari ByMella! Paduan warna merah muda manis yang dominan berpadu sentuhan kuning nanas segar siap bikin harimu penuh energi dan senyuman.</p>
+                <div class="hero-action-group">
+                    <a href="#katalog" class="btn btn-primary">Mulai Pilih Baju</a>
+                    <a href="#koleksi" class="btn btn-secondary">Lihat Kategori</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-frame-wrapper">
+                    <img src="assets/hero_fashion_banner.png" alt="Koleksi utama baju ByMella" class="hero-img-main">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="koleksi" class="filter-section">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-hint">Temukan Sistem Belanjamu</span>
+                <h2 class="section-main-title">Pilih Berdasarkan Kategori</h2>
+            </div>
+            <div class="filter-buttons-wrapper">
+                <button class="filter-tab active" data-target="all">Semua Produk</button>
+                <button class="filter-tab" data-target="PO">Pre-Order (PO)</button>
+                <button class="filter-tab" data-target="Custom">Custom Desain</button>
+                <button class="filter-tab" data-target="Ready">Ready Stock</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="katalog" class="catalog-section">
+        <div class="catalog-grid-container">
+            
+            <article class="product-card" data-category="PO">
+                <div class="product-media">
+                    <span class="product-badge badge-po">Pre-Order</span>
+                    <img src="assets/baju_pilihan_1.png" alt="Produk ByMella" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-tag-info">Estimasi 7 Hari</span>
+                    <h3 class="product-title">Soft Pink Ruffle Blouse</h3>
+                    <p class="product-desc">Atasan dengan aksen ruffle manis di dada. Bahannya adem banget buat dipakai seharian.</p>
+                    <div class="product-footer-row">
+                        <span class="product-price">Rp 175.000</span>
+                        <button class="add-to-cart-action" data-id="po-01" data-name="Soft Pink Ruffle Blouse" data-price="175000">
+                            <i class="fas fa-plus"></i> Masuk Tas
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Sunshine Oversized Knit</h3><p class="product-desc">Rajut longgar warna kuning cerah biar gaya kasual kamu makin stand-out.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 195.000</span><button class="add-to-cart-action" data-id="po-02" data-name="Sunshine Oversized Knit" data-price="195000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Cherry Blossom Midi Skirt</h3><p class="product-desc">Rok midi manis potongan A-line bikin langkah kaki terlihat lebih anggun.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 210.000</span><button class="add-to-cart-action" data-id="po-03" data-name="Cherry Blossom Midi Skirt" data-price="210000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Pineapple Pastel Cardigan</h3><p class="product-desc">Kardigan rajut tipis yang manis buat outer outfit kuliah atau ngantor.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 185.000</span><button class="add-to-cart-action" data-id="po-04" data-name="Pineapple Pastel Cardigan" data-price="185000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Cotton Candy Daily Shirt</h3><p class="product-desc">Kemeja basic katun warna pink cerah yang super gampang di mix and match.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 160.000</span><button class="add-to-cart-action" data-id="po-05" data-name="Cotton Candy Daily Shirt" data-price="160000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Lemon Drop Tiered Dress</h3><p class="product-desc">Dress tingkat dengan flow kain yang cantik saat kamu berputar atau jalan.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 280.000</span><button class="add-to-cart-action" data-id="po-06" data-name="Lemon Drop Tiered Dress" data-price="280000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Berry Cute Vest Outer</h3><p class="product-desc">Rompi rajut sebagai pemanis kemeja polos biar gaya kamu makin modis.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 145.000</span><button class="add-to-cart-action" data-id="po-07" data-name="Berry Cute Vest Outer" data-price="145000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Citrus Summer Culotte</h3><p class="product-desc">Kulot longgar linen warna kuning yang bikin ilusi kaki terlihat jenjang.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 190.000</span><button class="add-to-cart-action" data-id="po-08" data-name="Citrus Summer Culotte" data-price="190000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Sweetheart Puff Sleeve</h3><p class="product-desc">Blouse lengan balon dengan potongan leher berbentuk hati yang menawan.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 178.000</span><button class="add-to-cart-action" data-id="po-09" data-name="Sweetheart Puff Sleeve" data-price="178000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="PO">
+                <div class="product-media"><span class="product-badge badge-po">Pre-Order</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Estimasi 7 Hari</span><h3 class="product-title">Honey Yellow Ribbon Top</h3><p class="product-desc">Atasan dengan tali simpul pita besar di bagian bahu yang super gemas.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 165.000</span><button class="add-to-cart-action" data-id="po-10" data-name="Honey Yellow Ribbon Top" data-price="165000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media">
+                    <span class="product-badge badge-custom">Bisa Custom Size</span>
+                    <img src="assets/baju_pilihan_2.png" alt="Produk By Mella" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-tag-info">Bebas Request Ld &amp; Panjang</span>
+                    <h3 class="product-title">Tailored Rose Blazer</h3>
+                    <p class="product-desc">Blazer semi-formal pink fuchsia. Potongan pas di badan sesuai desain request-an kamu.</p>
+                    <div class="product-footer-row">
+                        <span class="product-price">Rp 320.000</span>
+                        <button class="add-to-cart-action" data-id="cust-01" data-name="Tailored Rose Blazer" data-price="320000">
+                            <i class="fas fa-plus"></i> Masuk Tas
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media"><span class="product-badge badge-custom">Bisa Custom Size</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Bebas Request Ld</span><h3 class="product-title">Sunshine Custom Maxi Dress</h3><p class="product-desc">Gaun panjang mewah untuk pesta, warna kuning mentega yang elegan.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 390.000</span><button class="add-to-cart-action" data-id="cust-02" data-name="Sunshine Custom Maxi Dress" data-price="390000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media"><span class="product-badge badge-custom">Bisa Custom Size</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Bebas Request Ld</span><h3 class="product-title">Blush Pink Wrap Tunic</h3><p class="product-desc">Tunik model ikat samping yang ramah buat berbagai bentuk dan lekuk tubuh.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 245.000</span><button class="add-to-cart-action" data-id="cust-03" data-name="Blush Pink Wrap Tunic" data-price="245000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media"><span class="product-badge badge-custom">Bisa Custom Size</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Bebas Request Panjang</span><h3 class="product-title">Canary Yellow Pleated Pants</h3><p class="product-desc">Celana plisket premium. Bisa request potong panjang biar gak kepanjangan.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 215.000</span><button class="add-to-cart-action" data-id="cust-04" data-name="Canary Yellow Pleated Pants" data-price="215000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media"><span class="product-badge badge-custom">Bisa Custom Size</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Bebas Request Ld</span><h3 class="product-title">Pinky Vintage Lace Top</h3><p class="product-desc">Atasan berenda gaya retro dengan detail brokat katun yang lembut lembut di kulit.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 265.000</span><button class="add-to-cart-action" data-id="cust-05" data-name="Pinky Vintage Lace Top" data-price="265000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Custom">
+                <div class="product-media"><span class="product-badge badge-custom">Bisa Custom Size</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Bebas Request Ld</span><h3 class="product-title">Golden Glow Jumpsuit</h3><p class="product-desc">One-set jumpsuit warna kuning keemasan yang modis dan praktis dipakai.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 340.000</span><button class="add-to-cart-action" data-id="cust-06" data-name="Golden Glow Jumpsuit" data-price="340000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media">
+                    <span class="product-badge badge-ready">Siap Kirim</span>
+                    <img src="assets/baju_pilihan_3.png" alt="Produk ByMella" class="product-img">
+                </div>
+                <div class="product-details">
+                    <span class="product-tag-info">Stok Terbatas</span>
+                    <h3 class="product-title">Instant Sweetheart Outer</h3>
+                    <p class="product-desc">Outerwear kancing depan instan warna merah muda pastel. Tinggal slup langsung siap pergi!</p>
+                    <div class="product-footer-row">
+                        <span class="product-price">Rp 155.000</span>
+                        <button class="add-to-cart-action" data-id="ready-01" data-name="Instant Sweetheart Outer" data-price="155000">
+                            <i class="fas fa-plus"></i> Masuk Tas
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Banyak</span><h3 class="product-title">Lemon Sorbet Casual Tee</h3><p class="product-desc">Kaos katun combed combed super santai dengan grafis tulisan nanas kecil.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 99.000</span><button class="add-to-cart-action" data-id="ready-02" data-name="Lemon Sorbet Casual Tee" data-price="99000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Terbatas</span><h3 class="product-title">Magenta Magic Culotte</h3><p class="product-desc">Celana kulot semi wool warna pink tua yang memberi kesan tegas tapi ceria.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 185.000</span><button class="add-to-cart-action" data-id="ready-03" data-name="Magenta Magic Culotte" data-price="185000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Terbatas</span><h3 class="product-title">Bright Yellow Linen Shirt</h3><p class="product-desc">Kemeja basic bahan linen crinkle. Tidak gampang kusut dan super rapi.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 165.000</span><button class="add-to-cart-action" data-id="ready-04" data-name="Bright Yellow Linen Shirt" data-price="165000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Terbatas</span><h3 class="product-title">Strawberry Milk Knit Cardie</h3><p class="product-desc">Kardigan rajut tebal bertekstur pop-corn yang lucu dipakai saat cuaca adem.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 225.000</span><button class="add-to-cart-action" data-id="ready-05" data-name="Strawberry Milk Knit Cardie" data-price="225000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Sisa 2 Pcs</span><h3 class="product-title">Summer Sun Crop Top</h3><p class="product-desc">Atasan crop dengan tali karet elastis nyaman bawah dada untuk bersantai.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 120.000</span><button class="add-to-cart-action" data-id="ready-06" data-name="Summer Sun Crop Top" data-price="120000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_3.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Banyak</span><h3 class="product-title">Flamingo Slit Skirt</h3><p class="product-desc">Rok span kasual dengan belahan samping bawah lutut untuk memudahkan gerak.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 170.000</span><button class="add-to-cart-action" data-id="ready-07" data-name="Flamingo Slit Skirt" data-price="170000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_1.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Stok Banyak</span><h3 class="product-title">Dandelion Simple Tunic</h3><p class="product-desc">Tunik kuning polos berpotongan lurus, cocok dipadukan dengan hijab senada.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 195.000</span><button class="add-to-cart-action" data-id="ready-08" data-name="Dandelion Simple Tunic" data-price="195000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+            <article class="product-card" data-category="Ready">
+                <div class="product-media"><span class="product-badge badge-ready">Siap Kirim</span><img src="assets/baju_pilihan_2.png" class="product-img"></div>
+                <div class="product-details"><span class="product-tag-info">Sisa 3 Pcs</span><h3 class="product-title">Blush Pink Jogger Pants</h3><p class="product-desc">Celana jogger pinggang karet yang pas buat gaya sporty harian kamu.</p>
+                <div class="product-footer-row"><span class="product-price">Rp 150.000</span><button class="add-to-cart-action" data-id="ready-09" data-name="Blush Pink Jogger Pants" data-price="150000"><i class="fas fa-plus"></i> Masuk Tas</button></div></div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-base">
+            <p>&copy; 2026 ByMella Official. Semuanya disiapkan spesial untuk hari ceriamu.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
