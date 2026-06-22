@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUXURY DESIGN SYSTEM - HUMAN PREPARED
+   NANASKU HIGH-END LUXURY DESIGN SYSTEM - HUMAN PREPARED
    ========================================================================== */
 
    :root {
@@ -13,7 +13,7 @@
     --nn-text-gray: #6E5E61;
     --nn-white: #FFFFFF;
     
-    --font-display: 'Syne', sans-serif;
+    --font-display: 'Cormorant Garamond', serif;
     --font-main: 'Inter', sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
