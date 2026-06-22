@@ -51,6 +51,24 @@ body {
 .nav-link { text-decoration: none; color: var(--nn-dark-charcoal); font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth); }
 .nav-link:hover, .nav-link.active { color: var(--nn-pink-primary); }
 
+/* Gaya Khusus untuk Tombol Join Group WA */
+.nav-link.btn-wa {
+    background-color: #25D366; /* Warna hijau khas WhatsApp */
+    color: #ffffff !important;   /* Warna teks putih murni */
+    padding: 8px 16px;         /* Jarak ruang di dalam tombol */
+    border-radius: 20px;       /* Membuat sudut tombol menjadi bulat (rounded) */
+    font-weight: 600;          /* Membuat teks sedikit lebih tebal */
+    transition: var(--transition-smooth); /* Menggunakan efek transisi halus bawaan Anda */
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); /* Efek bayangan tipis berwarna hijau */
+}
+
+/* Efek ketika kursor mouse diletakkan di atas tombol (Hover) */
+.nav-link.btn-wa:hover {
+    background-color: #20ba5a; /* Warna hijau sedikit lebih gelap saat di-hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat ke atas untuk efek interaktif */
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3); /* Bayangan menjadi lebih tegas */
+}
+
 .action-btn { background: none; border: none; font-size: 1.3rem; color: var(--nn-dark-charcoal); cursor: pointer; position: relative; }
 .cart-badge { position: absolute; top: -5px; right: -8px; background-color: var(--nn-pink-deep); color: var(--nn-white); font-size: 0.7rem; padding: 1px 6px; border-radius: 50px; font-weight: 700; }
 
