@@ -51,23 +51,6 @@ body {
 .nav-link { text-decoration: none; color: var(--nn-dark-charcoal); font-weight: 600; font-size: 0.95rem; transition: var(--transition-smooth); }
 .nav-link:hover, .nav-link.active { color: var(--nn-pink-primary); }
 
-/* Gaya Khusus untuk Tombol Join Group WA */
-.nav-link.btn-wa {
-    background-color: #25D366; /* Warna hijau khas WhatsApp */
-    color: #ffffff !important;   /* Warna teks putih murni */
-    padding: 8px 16px;         /* Jarak ruang di dalam tombol */
-    border-radius: 20px;       /* Membuat sudut tombol menjadi bulat (rounded) */
-    font-weight: 600;          /* Membuat teks sedikit lebih tebal */
-    transition: var(--transition-smooth); /* Menggunakan efek transisi halus bawaan Anda */
-    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); /* Efek bayangan tipis berwarna hijau */
-}
-
-/* Efek ketika kursor mouse diletakkan di atas tombol (Hover) */
-.nav-link.btn-wa:hover {
-    background-color: #20ba5a; /* Warna hijau sedikit lebih gelap saat di-hover */
-    transform: translateY(-2px); /* Tombol sedikit terangkat ke atas untuk efek interaktif */
-    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3); /* Bayangan menjadi lebih tegas */
-}
 
 .action-btn { background: none; border: none; font-size: 1.3rem; color: var(--nn-dark-charcoal); cursor: pointer; position: relative; }
 .cart-badge { position: absolute; top: -5px; right: -8px; background-color: var(--nn-pink-deep); color: var(--nn-white); font-size: 0.7rem; padding: 1px 6px; border-radius: 50px; font-weight: 700; }
@@ -176,4 +159,34 @@ body {
 @media (max-width: 992px) {
     .hero-container { grid-template-columns: 1fr; text-align: center; }
     .hero-action-group { justify-content: center; }
+}
+
+/* Mengatur wadah agar isinya sejajar horizontal dan memisahkan kiri-kanan */
+.hero-tagline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ini kunci utama agar pill kiri dan kanan terpisah ke ujung */
+    width: 100%;                   /* Memastikan wadah mengambil lebar penuh area hero */
+    gap: 16px;                     /* Jarak aman jika layar HP mengecil agar tidak terlalu menempel */
+    margin-bottom: 20px;           /* Sesuaikan dengan jarak ke elemen bawahnya */
+}
+
+/* Menghias Link WA agar senada dengan tag-pill Anda namun dengan tema WhatsApp */
+.tag-pill.btn-wa-pill {
+    background-color: #25D366;    /* Warna hijau WhatsApp */
+    color: #ffffff !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.15);
+}
+
+/* Efek interaktif saat kursor mouse menyentuh tombol WA */
+.tag-pill.btn-wa-pill:hover {
+    background-color: #20ba5a;
+    transform: translateY(-1px);  /* Efek naik sedikit yang elegan */
+    box-shadow: 0 6px 14px rgba(37, 211, 102, 0.25);
 }
