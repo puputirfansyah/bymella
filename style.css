@@ -190,3 +190,12 @@ body {
     transform: translateY(-1px);  /* Efek naik sedikit yang elegan */
     box-shadow: 0 6px 14px rgba(37, 211, 102, 0.25);
 }
+
+@media (max-width: 576px) {
+    .hero-tagline {
+        flex-direction: column;    /* Mengubah baris horizontal menjadi vertikal di HP */
+        align-items: center;       /* Membuat keduanya kembali ke tengah-tengah layar */
+        justify-content: center;
+        gap: 10px;
+    }
+}
