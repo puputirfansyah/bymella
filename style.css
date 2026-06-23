@@ -52,33 +52,21 @@ body {
 .nav-link:hover, .nav-link.active { color: var(--nn-pink-primary); }
 
 /* Gaya Khusus untuk Tombol Join Group WA */
-/* Wrapper untuk mengatur posisi tengah dan jarak ke bawah */
-.hero-wa-wrapper {
-    display: flex;
-    justify-content: center; /* Memastikan tombol berada di tengah (center) sama seperti tag-pill */
-    margin-bottom: 12px;     /* Mengatur jarak vertikal antara tombol WA dan tag-pill di bawahnya */
+.nav-link.btn-wa {
+    background-color: #25D366; /* Warna hijau khas WhatsApp */
+    color: #ffffff !important;   /* Warna teks putih murni */
+    padding: 8px 16px;         /* Jarak ruang di dalam tombol */
+    border-radius: 20px;       /* Membuat sudut tombol menjadi bulat (rounded) */
+    font-weight: 600;          /* Membuat teks sedikit lebih tebal */
+    transition: var(--transition-smooth); /* Menggunakan efek transisi halus bawaan Anda */
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); /* Efek bayangan tipis berwarna hijau */
 }
 
-/* Mengadopsi kemewahan tata letak tag-pill tetapi dengan nuansa tombol WhatsApp */
-.btn-wa-hero {
-    display: inline-flex;
-    align-items: center;
-    background-color: #25D366; /* Warna dasar hijau WA */
-    color: #ffffff !important;
-    padding: 6px 16px;         /* Ketebalan padding yang mirip dengan standarisasi tag-pill */
-    font-size: 0.85rem;        /* Ukuran font proposional untuk area atas */
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;       /* Membuat bentuk pil (capsule) yang identik dengan tag-pill Anda */
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.15);
-    transition: var(--transition-smooth); /* Mengikuti transisi halus bawaan web Anda */
-}
-
-/* Efek Interaktif (Hover) di Komputer Lokal */
-.btn-wa-hero:hover {
-    background-color: #20ba5a;
-    transform: translateY(-2px); /* Efek melayang sedikit ke atas saat didekati kursor */
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
+/* Efek ketika kursor mouse diletakkan di atas tombol (Hover) */
+.nav-link.btn-wa:hover {
+    background-color: #20ba5a; /* Warna hijau sedikit lebih gelap saat di-hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat ke atas untuk efek interaktif */
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3); /* Bayangan menjadi lebih tegas */
 }
 
 .action-btn { background: none; border: none; font-size: 1.3rem; color: var(--nn-dark-charcoal); cursor: pointer; position: relative; }
