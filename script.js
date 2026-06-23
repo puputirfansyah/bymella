@@ -151,9 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const PHONE_ADMIN = '628123456789'; // Ganti dengan nomor WhatsApp jualanmu
+            const PHONE_ADMIN = '6283898954415'; // nomor wawa
             
-            let teksOrder = `*Pesanan Baru - ByMella Official*\n`;
+            let teksOrder = `*Pesanan Baru - Mellove Official*\n`;
             teksOrder += `===============================\n`;
             teksOrder += `Kak Admin, saya mau pesan baju-baju gemas ini ya:\n\n`;
 
