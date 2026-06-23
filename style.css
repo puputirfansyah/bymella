@@ -104,13 +104,88 @@ body {
 
 .product-card { background-color: var(--nn-white); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.02); border: 1px solid #F5EBED; display: flex; flex-direction: column; transition: var(--transition-smooth); }
 .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(255, 94, 126, 0.08); }
-.product-media { position: relative; aspect-ratio: 0.85; background-color: var(--nn-pink-soft); }
+.product-media { position: relative; aspect-ratio: 0.85; background-color: var(--nn-pink-soft); overflow: hidden; }
 .product-img { width: 100%; height: 100%; object-fit: cover; }
 
-.product-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; color: var(--nn-white); }
+/* Slider Gambar Produk */
+.product-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+.slider-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--nn-pink-primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 10;
+}
+.product-media:hover .slider-btn {
+    opacity: 1;
+}
+.slider-btn:hover {
+    background-color: var(--nn-white);
+    transform: translateY(-50%) scale(1.1);
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.product-badge { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; color: var(--nn-white); z-index: 20; }
 .badge-po { background-color: #8E44AD; }
 .badge-custom { background-color: #2980B9; }
 .badge-ready { background-color: #27AE60; }
+
+/* Hint Slide Kanan Kiri */
+.swipe-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(255, 94, 126, 0.85);
+    color: white;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    pointer-events: none;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.85;
+    animation: bounceHorizontal 2s infinite;
+}
+
+@keyframes bounceHorizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+}
 
 .product-details { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
 .product-tag-info { font-size: 0.75rem; color: var(--nn-pink-primary); font-weight: 700; margin-bottom: 4px; }

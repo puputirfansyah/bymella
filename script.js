@@ -173,6 +173,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Auto-generate Product Sliders for all products
+    const productMedias = document.querySelectorAll('.product-media');
+    productMedias.forEach(media => {
+        const existingImg = media.querySelector('img.product-img');
+        const badge = media.querySelector('.product-badge');
+        if (!existingImg) return;
+
+        // Tentukan gambar dummy (geser urutan gambar sebagai variasi)
+        let imgSrc2 = 'assets/baju_pilihan_1.png';
+        if (existingImg.src.includes('baju_pilihan_1.png')) imgSrc2 = 'assets/baju_pilihan_2.png';
+        else if (existingImg.src.includes('baju_pilihan_2.png')) imgSrc2 = 'assets/baju_pilihan_3.png';
+        
+        const slider = document.createElement('div');
+        slider.className = 'product-slider';
+        
+        const slide1 = document.createElement('div');
+        slide1.className = 'slider-item';
+        const img1 = document.createElement('img');
+        img1.src = existingImg.src;
+        img1.className = 'product-img';
+        img1.alt = existingImg.alt || 'Gambar Produk 1';
+        slide1.appendChild(img1);
+        
+        const slide2 = document.createElement('div');
+        slide2.className = 'slider-item';
+        const img2 = document.createElement('img');
+        img2.src = imgSrc2;
+        img2.className = 'product-img';
+        img2.alt = 'Gambar Produk Tambahan';
+        slide2.appendChild(img2);
+        
+        slider.appendChild(slide1);
+        slider.appendChild(slide2);
+        
+        media.innerHTML = '';
+        if (badge) media.appendChild(badge);
+        media.appendChild(slider);
+        
+        // Teks Hint Geser
+        const swipeHint = document.createElement('div');
+        swipeHint.className = 'swipe-hint';
+        swipeHint.innerHTML = 'Geser <i class="fas fa-arrow-right"></i>';
+        media.appendChild(swipeHint);
+        
+        // Tombol Navigasi Slider
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'slider-btn prev-btn';
+        prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'slider-btn next-btn';
+        nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        
+        media.appendChild(prevBtn);
+        media.appendChild(nextBtn);
+        
+        // Logika Geser (Scroll)
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+        });
+        
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+        });
+    });
+
     // Mesin Filtrasi Kategori Katalog Instan (PO / Custom / Ready)
     const tabs = document.querySelectorAll('.filter-tab');
     const cards = document.querySelectorAll('.product-card');
