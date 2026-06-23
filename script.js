@@ -265,4 +265,67 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Lightbox / Zoom Gambar Logic
+    const lightboxOverlay = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
+
+    if (lightboxOverlay && lightboxImg && lightboxClose) {
+        // Delegasi event klik untuk semua gambar produk yang ada & baru dibuat
+        document.body.addEventListener('click', (e) => {
+            if (e.target.classList.contains('product-img')) {
+                const slider = e.target.closest('.product-slider');
+                if (slider) {
+                    currentLightboxImages = Array.from(slider.querySelectorAll('.product-img')).map(img => img.src);
+                    currentLightboxIndex = currentLightboxImages.indexOf(e.target.src);
+                } else {
+                    currentLightboxImages = [e.target.src];
+                    currentLightboxIndex = 0;
+                }
+
+                lightboxImg.src = currentLightboxImages[currentLightboxIndex];
+                lightboxOverlay.classList.add('active');
+            }
+        });
+
+        const updateLightboxImage = () => {
+            if(currentLightboxImages.length > 0) {
+                lightboxImg.src = currentLightboxImages[currentLightboxIndex];
+            }
+        };
+
+        if (lightboxPrev && lightboxNext) {
+            lightboxPrev.addEventListener('click', (e) => {
+                e.stopPropagation(); // Mencegah klik menyebar ke overlay (yang akan menutup modal)
+                if (currentLightboxImages.length > 0) {
+                    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+                    updateLightboxImage();
+                }
+            });
+
+            lightboxNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentLightboxImages.length > 0) {
+                    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+                    updateLightboxImage();
+                }
+            });
+        }
+
+        const closeLightbox = () => {
+            lightboxOverlay.classList.remove('active');
+            setTimeout(() => { lightboxImg.src = ''; currentLightboxImages = []; }, 300);
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) closeLightbox();
+        });
+    }
 });
