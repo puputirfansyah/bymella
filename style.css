@@ -167,7 +167,7 @@ body {
     align-items: center;
     justify-content: flex-start; /* Ini kunci utama agar pill kiri dan kanan terpisah ke ujung */
     width: 100%;                   /* Memastikan wadah mengambil lebar penuh area hero */
-    gap: 16px;                     /* Jarak aman jika layar HP mengecil agar tidak terlalu menempel */
+    gap: 12px;                     /* Jarak aman jika layar HP mengecil agar tidak terlalu menempel */
     margin-bottom: 20px;           /* Sesuaikan dengan jarak ke elemen bawahnya */
 }
 
